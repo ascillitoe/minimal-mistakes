@@ -23,7 +23,7 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : "Ashley Scillitoe"
 description              : "An amazing website."
 url                      : "https://ascillitoe.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "ascillitoe/minimal-mistakes"
 teaser                   : "/assets/images/aircraft_moon.jpg"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
