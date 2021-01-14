@@ -9,9 +9,8 @@ header:
     overlay_image: /assets/images/tree_header.jpg
     overlay_filter: 0.45
     actions:
-    - label: "<i class='fas fa-download'></i> Get code TODO"
-      url: "https://github.com/ascillitoe/mondrian_turbulence"
+#    - label: "<i class='fas fa-download'></i> Get code TODO"
+#      url: "https://github.com/ascillitoe/mondrian_turbulence"
 ---
 
-
-
+More details coming soon!
