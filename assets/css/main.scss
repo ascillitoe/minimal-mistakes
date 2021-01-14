@@ -6,3 +6,44 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.icon-white {
+  color: white !important;
+}
+
+.icon-mint {
+  color: #00D0AF !important;
+}
+
+.icon-green {
+  color: green !important;
+}
+
+html {
+  font-size: 14px; // change to whatever
+
+  @include breakpoint($medium) {
+    font-size: 16px; // change to whatever
+  }
+
+  @include breakpoint($large) {
+    font-size: 18px; // change to whatever
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 20px; // change to whatever
+  }
+}
+
+figure {
+    display: block;
+    margin: 0px; 
+    text-align: center;
+}
+figure img {
+    vertical-align: top;
+}
+figure figcaption {
+    text-align: center;
+    font-style: italic;
+}
