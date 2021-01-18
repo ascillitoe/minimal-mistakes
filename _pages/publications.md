@@ -49,7 +49,7 @@ img {
 
 {% assign bibtest = false %}
 {% if publi.url %}
-{% assign bibfile = "/papers/" | append:  publi.url  | append: ".txt" %}
+{% assign bibfile = "/papers/" | append:  publi.url  | append: ".bib" %}
 {% for file in site.static_files %}
   {% if file.path contains bibfile %}
    {% assign bibtest = true %}
@@ -119,7 +119,7 @@ img {
 
 {% assign bibtest = false %}
 {% if publi.url %}
-{% assign bibfile = "/papers/" | append:  publi.url  | append: ".txt" %}
+{% assign bibfile = "/papers/" | append:  publi.url  | append: ".bib" %}
 {% for file in site.static_files %}
   {% if file.path contains bibfile %}
    {% assign bibtest = true %}
