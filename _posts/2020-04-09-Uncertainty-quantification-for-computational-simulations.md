@@ -8,7 +8,7 @@ tags:
 mathjax: true
 ---
 
-In this blog post, I'll talk about using Effective Quadratures for uncertainty quantification of computational simulations. If you'd like to follow along, the code from this post can be run interactively on the cloud by clicking below:
+In this blog post, I'll talk about using the [Effective Quadratures](https://github.com/Effective-Quadratures/equadratures) python package for uncertainty quantification of computational simulations. If you'd like to follow along, the code from this post can be run interactively on the cloud by clicking below:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Effective-Quadratures/EQ-live/blob/master/Blog_posts/computing_moments.ipynb)
 

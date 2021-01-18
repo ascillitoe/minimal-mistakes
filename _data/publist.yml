@@ -68,6 +68,14 @@
   arxiv: "1809.05189"
   abstract: "Theoretical methods are developed to understand the effect of non-uniform grids on Flux Reconstruction (FR) in multi-dimensions. A better theoretical understanding of the effect of wave angle and grid deformation is established. FR is shown to have a smaller variation in properties than some finite difference counterparts. Subsequent numerical experiments on the Taylor–Green Vortex with jittered elements show the effect of localised regions of expansion and contraction. The effect this had on Nodal DG-like schemes was to increase the dissipation, whereas for more typical FR schemes the effect was to increase the dispersion. Some comparison is made between second-order FR and a second-order finite volume (FV) scheme. FR is found to be more resilient to mesh deformation, however, FV is found to be more resolved when operated at second order on the same mesh."
 
+- title: "Bayesian Polynomial Chaos"
+  authors: P. Seshadri, A. B. Duncan, A. Scillitoe
+  url: seshadri-ml4eng-2020
+  journal: Proceedings of Machine Learning for Engineering Modeling, Simulation, and Design Workshop at NeurIPS
+  year: 2020
+  image: ls89_bayes.png 
+  abstract: "In this brief paper we introduce Bayesian polynomial chaos, a Gaussian process analogue to polynomial chaos. We argue why this Bayesian re-formulation of polynomial chaos is necessary and then proceed to mathematically define it, followed by an examination of its utility in computing moments and sensitivities; multi-fidelity modelling, and information fusion."
+
 - title: "Separated flow prediction and assessment using LES and machine learning"
   authors: James C. Tyacke, A. Scillitoe
   url: tyacke-ICNAAM-2020
@@ -77,6 +85,14 @@
   doi: 10.1063/5.0027925 
   image: les_cube.png
   abstract: "Large Eddy Simulation is a predictive technology that has the potential to revolutionise CFD. Significant effort is now being put into improving lower order models based on high fidelity data. The current work contrasts LES and RANS for a low Reynolds number ribbed channel flow relevant to turbine and electronics cooling. The anisotropy of turbulence is chosen as a starting point to compare RANS modelling deficiencies, and it is found that there are significant differences between the anisotropy predicted by RANS and LES. In the LES, a spreading shear layer introduces anisotropic content into the passage. Downstream of the rib, scouring eddies shed from the rib destroy the classical boundary layer flow. A machine learning classifier trained on a database of similar flows is used to predict the anisotropy in the ribbed passage. The classifier is shown to be capable of predicting many of the flow features identified in the LES, demonstrating the potential of such approaches for application to this category of flows."
+
+- title: "Using Machine learning to predict and understand turbulence modelling uncertainties"
+  authors: A. Scillitoe
+  url: scillitoe-frontuq-2019
+  year: 2019
+  journal: Proceedings of Workshop on Frontiers of Uncertainty Quantification in Fluid Dynamics
+  info: Pisa, Italy
+  image: turb_shap.png 
 
 - title: "Large eddy simulation of boundary layer transition mechanisms in a gas-turbine compressor cascade"
   authors: A. Scillitoe, P. G. Tucker, P. Adami

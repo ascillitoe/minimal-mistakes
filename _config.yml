@@ -21,7 +21,7 @@ title                    : "Ashley Scillitoe"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Ashley Scillitoe"
-description              : "An amazing website."
+description              : "Tackling aerospace challenges with innovations in computational fluid dynamics and data science."
 url                      : "https://ascillitoe.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "ascillitoe/minimal-mistakes"
