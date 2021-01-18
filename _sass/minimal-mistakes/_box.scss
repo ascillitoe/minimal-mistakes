@@ -1,0 +1,10 @@
+    .box {
+        background-color: mix(#fff, #3b9cba, 90%);
+        margin: 1em 0 !important;
+        padding: 1em;
+        font-size: $type-size-5 !important;
+        text-indent: initial; /* override*/
+        box-shadow: 0 1px 1px rgba(#3b9cba, 0.25);
+        border-radius: $border-radius;
+    }
+

@@ -1,0 +1,78 @@
+/* Collaspible box */
+.wrap-collabsible {
+  margin-bottom: 1.2rem 0;
+  margin-top: 0.3rem;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+
+  font-weight: bold;
+  font-family: $sans-serif;
+  /*font-size: 1.2rem;*/
+  text-transform: uppercase;
+  font-size: $type-size-7;
+  text-align: center;
+
+  padding: 0.5em;
+
+  color: white;
+  background: $primary-color2;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  background: $primary-color;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-1.5px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 100vh;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.collapsible-content .content-inner {
+  background: $primary-color3;
+  border-bottom: 1px solid $primary-color;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .2rem .6rem;
+  font-size: $type-size-5;
+}
+
+
