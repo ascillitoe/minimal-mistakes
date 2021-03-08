@@ -21,7 +21,7 @@
   url: scillitoe-jcp-2021
   journal: Journal of Computational Physics
   year: 2021
-  info: 110116
+  info: <b>430</b>(1), 110116
   doi: 10.1016/j.jcp.2021.110116
   arxiv: "2003.01968"
   image: mondrian.png
@@ -62,7 +62,7 @@
   url: trojak-scicomp-2020
   journal: Journal of Scientific Computing
   year: 2020
-  info: 82(3), 77, 1-36
+  info: <b>82</b>(3), 77, 1-36
   doi: 10.1007/s10915-020-01184-2
   image: wave_advection.png
   arxiv: "1809.05189"
@@ -108,7 +108,7 @@
   url: scillitoe-turbo-2019
   journal: Journal of Turbomachinery
   year: 2019
-  info: 141(6), 061008
+  info: <b>141</b>(6), 061008
   doi: 10.1115/1.4042023
   image: les_compressor.png
   abstract: "Large eddy simulation (LES) is used to explore the boundary layer transition mechanisms in two rectilinear compressor cascades. To reduce numerical dissipation, a novel locally adaptive smoothing (LAS) scheme is added to an unstructured finite volume solver. The performance of a number of subgrid scale (SGS) models is explored. With the first cascade, numerical results at two different freestream turbulence intensities (Ti's), 3.25% and 10%, are compared. At both Ti's, time-averaged skin-friction and pressure coefficient distributions agree well with previous direct numerical simulations (DNS). At Ti = 3.25%, separation-induced transition occurs on the suction surface, while it is bypassed on the pressure surface. The pressure surface transition is dominated by modes originating from the convection of Tollmien–Schlichting waves by Klebanoff streaks. However, they do not resemble a classical bypass transition. Instead, they display characteristics of the “overlap” and “inner” transition modes observed in the previous DNS. At Ti = 10%, classical bypass transition occurs, with Klebanoff streaks incepting turbulent spots. With the second cascade, the influence of unsteady wakes on transition is examined. Wake-amplified Klebanoff streaks were found to instigate turbulent spots, which periodically shorten the suction surface separation bubble. The celerity line corresponding to 70% of the free-stream velocity, which is associated with the convection speed of the amplified Klebanoff streaks, was found to be important."
@@ -118,7 +118,7 @@
   url: scillitoe-turbo-2017
   journal: Journal of Turbomachinery
   year: 2017
-  info: 139(2), 021011
+  info: <b>139</b>(2), 021011
   doi: 10.1115/1.4034797
   image: endwall_les.png
   abstract: "Regions of three-dimensional separations are an inherent flow feature of the suction surface-endwall corner in axial compressors. These corner separations can cause a significant total pressure loss and reduce the compressor's efficiency. This paper uses wall-resolved LES to investigate the loss sources in a corner separation, and examines the influence of the inflow turbulence on these sources. Different subgrid scale (SGS) models are tested and the choice of model is found to be important. The σ SGS model, which performed well, is then used to perform LES of a compressor endwall flow. The time-averaged data are in good agreement with measurements. The viscous and turbulent dissipation are used to highlight the sources of loss, with the latter being dominant. The key loss sources are seen to be the 2D laminar separation bubble and trailing edge wake, and the 3D flow region near the endwall. Increasing the freestream turbulence (FST) intensity changes the suction surface boundary layer transition mode from separation induced to bypass. However, it does not significantly alter the transition location and therefore the corner separation size. Additionally, the FST does not noticeably interact with the corner separation itself, meaning that in this case the corner separation is relatively insensitive to the FST. The endwall boundary layer state is found to be significant. A laminar endwall boundary layer separates much earlier leading to a larger passage vortex. This significantly alters the endwall flow and loss. Hence, the need for accurate boundary measurements is clear."

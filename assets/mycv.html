@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base target="_parent"> 
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <title>Ashley Scillitoe - Resume</title>
+    <meta name="keywords" content="Ashley Scillitoe,resume,curriculum vitae,cv" />
+    <meta name="description" content="Ashley Scillitoe's Interactive Resume" />
+    <meta property="og:title" content="Resume of Ashley Scillitoe" />
+    <meta property="og:type" content="document" />
+    <meta property="og:url" content="http://www.ascillitoe.com" />
+    <meta
+      property="og:image"
+      content="https://ascillitoe.com/assets/images/me.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Ashley Scillitoe's Interactive Resume"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="http://www.ascillitoe.com/" />
+    <meta name="twitter:title" content="Resume of Ashley Scillitoe" />
+    <meta
+      name="twitter:description"
+      content="Ashley Scillitoe's Interactive Resume"
+    />
+    <meta
+      name="twitter:image"
+      content="https://ascillitoe.com/assets/images/me.jpg"
+
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
+
+      html,
+      body {
+        background: #fff;
+        font-family: Quicksand, Arial, Verdana, sans-serif;
+        font-size: 14px;
+        color: #444;
+      }
+
+      #resume {  /* <main> id=resume */
+        background: #fff;
+        box-sizing: border-box;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+        margin: 2rem auto;
+        padding: 2.75rem;
+        position: relative;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        line-height: 2rem;
+        font-weight: normal;
+        color: #000;
+      }
+
+      h2 {
+        color: #31708e;
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0;
+        margin-top: 1.5rem;
+        text-transform: uppercase;
+      }
+
+      h3 {
+        color: #111;
+        font-size: 1.25rem;
+        margin-top: 0rem;
+        margin: 0;
+        font-weight: normal;
+      }
+
+      h3 span.dept {
+        color: #aaa;
+      }
+
+      h3 span.dept::before {
+        content: "";
+        border-left: 1px solid #ccc;
+        padding-left: 0.4rem;
+      }
+
+      h4 {
+        margin: 0;
+        font-weight: normal;
+      }
+
+      h4 span.dates {
+        color: #888;
+        display: inline-block;
+        float: right;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+      }
+
+      time {
+        display: inline-block;
+        min-width: 2rem;
+      }
+
+      address {
+        font-style: normal;
+      }
+
+      .normal {
+        font-weight: normal;
+      }
+
+      .position {
+        margin-top: 0.75rem;
+        transition: opacity 0.7s;
+      }
+
+      .no-bullets,
+      .no-bullets ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+        color: #000;
+        font-weight: bold;
+      }
+      .no-bullets ul {
+        font-weight: normal;
+      }
+      .no-bullets span {
+        color: #666;
+      }
+
+      #contact {
+        text-align: right;
+        font-size: 0.9rem;
+      }
+
+      #phone {
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-decoration: none !important;
+      }
+
+      #location {
+        font-size: 1.1rem;
+      }
+
+      #languages {
+        column-count: 4;
+      }
+
+      a,
+      a:visited,
+      a:link,
+      a:active,
+      a:focus,
+      #languages label {
+        color: #83a9bb;
+      }
+
+      a:hover,
+      label {
+        color: #31708e;
+      }
+
+      #professional-experience {
+        position: relative;
+      }
+
+      main input {
+        position: absolute;
+        left: -10000px;
+      }
+
+      .educert {
+        display: flex;
+      }
+      .educert li {
+        flex: 1;
+        align-items: start;
+        justify-content: start;
+      }
+
+      #html:not(:checked) ~ div [for="html"]::before,
+      #javascript:not(:checked) ~ div [for="javascript"]::before,
+      #css:not(:checked) ~ div [for="css"]::before,
+      #kotlin:not(:checked) ~ div [for="kotlin"]::before,
+      #java:not(:checked) ~ div [for="java"]::before,
+      #csharp:not(:checked) ~ div [for="csharp"]::before,
+      #php:not(:checked) ~ div [for="php"]::before,
+      #sql:not(:checked) ~ div [for="sql"]::before,
+      #sqlserver:not(:checked) ~ div [for="sqlserver"]::before,
+      #mysql:not(:checked) ~ div [for="mysql"]::before,
+      #reactjs:not(:checked) ~ div [for="reactjs"]::before,
+      #aem:not(:checked) ~ div [for="aem"]::before,
+      #cq5:not(:checked) ~ div [for="cq5"]::before,
+      #seo:not(:checked) ~ div [for="seo"]::before,
+      #a11y:not(:checked) ~ div [for="a11y"]::before,
+      #sass:not(:checked) ~ div [for="sass"]::before,
+      #less:not(:checked) ~ div [for="less"]::before,
+      #api:not(:checked) ~ div [for="api"]::before,
+      #mobile:not(:checked) ~ div [for="mobile"]::before,
+      #jquery:not(:checked) ~ div [for="jquery"]::before {
+        content: "\2610 ";
+        font-size: 1.2rem;
+        color: #aaa;
+        font-weight: bold;
+      }
+
+      #html:checked ~ div [for="html"]::before,
+      #javascript:checked ~ div [for="javascript"]::before,
+      #css:checked ~ div [for="css"]::before,
+      #kotlin:checked ~ div [for="kotlin"]::before,
+      #java:checked ~ div [for="java"]::before,
+      #csharp:checked ~ div [for="csharp"]::before,
+      #php:checked ~ div [for="php"]::before,
+      #sql:checked ~ div [for="sql"]::before,
+      #sqlserver:checked ~ div [for="sqlserver"]::before,
+      #mysql:checked ~ div [for="mysql"]::before,
+      #reactjs:checked ~ div [for="reactjs"]::before,
+      #aem:checked ~ div [for="aem"]::before,
+      #cq5:checked ~ div [for="cq5"]::before,
+      #seo:checked ~ div [for="seo"]::before,
+      #a11y:checked ~ div [for="a11y"]::before,
+      #sass:checked ~ div [for="sass"]::before,
+      #less:checked ~ div [for="less"]::before,
+      #mobile:checked ~ div [for="mobile"]::before,
+      #api:checked ~ div [for="api"]::before,
+      #jquery:checked ~ div [for="jquery"]::before {
+        content: "\2611 ";
+        font-size: 1.2rem;
+        color: #000;
+        font-weight: bold;
+      }
+
+      #filters {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+      }
+
+      #filters > ul {
+        list-style: none;
+        padding-left: 0;
+        margin: -0.5rem;
+        padding: 0.5rem;
+      }
+
+      #filters > ul > li > h3 {
+        margin: 0;
+        display: block;
+        text-align: right;
+        font-weight: bold;
+        font-size: 1rem;
+        color: #83a9bb;
+        text-transform: uppercase;
+      }
+
+      #filters > ul > li > h3:hover {
+        color: #31708e;
+      }
+
+
+      #filters > ul > li > h3::before {
+        content: "\2610 ";
+        font-size: 1.2rem;
+      }
+
+      input:checked ~ div #filters > ul > li > h3::before {
+        content: "\2611 ";
+      }
+
+      #filters > ul:hover {
+        background: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      #filters > ul:hover ul {
+        list-style: none;
+        padding-left: 0;
+        display: block;
+        column-count: 4;
+      }
+
+      #filters > ul > li > ul {
+        position: relative;
+        top: 0;
+        right: 0;
+        display: none;
+        padding: 1rem;
+      }
+
+      label {
+        cursor: pointer;
+      }
+
+      input:checked ~ div section.position,
+      input:checked ~ div #languages label {
+        opacity: 0.25;
+      }
+
+      #html:checked ~ div .position.html,
+      #javascript:checked ~ div .position.javascript,
+      #css:checked ~ div .position.css,
+      #kotlin:checked ~ div .position.kotlin,
+      #java:checked ~ div .position.java,
+      #csharp:checked ~ div .position.csharp,
+      #php:checked ~ div .position.php,
+      #sql:checked ~ div .position.sql,
+      #sqlserver:checked ~ div .position.sqlserver,
+      #mysql:checked ~ div .position.mysql,
+      #reactjs:checked ~ div .position.reactjs,
+      #seo:checked ~ div .position.seo,
+      #aem:checked ~ div .position.aem,
+      #cq5:checked ~ div .position.cq5,
+      #a11y:checked ~ div .position.a11y,
+      #sass:checked ~ div .position.sass,
+      #less:checked ~ div .position.less,
+      #mobile:checked ~ div .position.mobile,
+      #api:checked ~ div .position.api,
+      #jquery:checked ~ div .position.jquery,
+      #html:checked ~ div #languages [for="html"],
+      #javascript:checked ~ div #languages [for="javascript"],
+      #css:checked ~ div #languages [for="css"],
+      #kotlin:checked ~ div #languages [for="kotlin"],
+      #java:checked ~ div #languages [for="java"],
+      #csharp:checked ~ div #languages [for="csharp"],
+      #php:checked ~ div #languages [for="php"],
+      #sql:checked ~ div #languages [for="sql"] {
+        opacity: 1;
+      }
+
+      #contact-mini {
+        display: flex;
+        margin-top: 1rem;
+      }
+
+      #contact-mini > div {
+        font-size: 0.75rem;
+        flex: 1;
+      }
+
+      #contact-mini > div:nth-child(2) {
+        text-align: center;
+        flex: 2;
+      }
+      #contact-mini > div:last-child {
+        text-align: right;
+      }
+
+      input:checked ~ div #languages label[for]::before,
+      input:not(:checked) ~ div #languages label[for]::before {
+        content: "";
+      }
+
+      #contact {
+        display: none;
+      }
+
+      /*@media all and (min-width: 630px) {
+        main {
+          max-width: 600px;
+        }
+        #contact-mini > div {
+          font-size: 1rem;
+        }
+      }
+
+      @media all and (min-width: 1000px) {
+        html,
+        body {
+          font-size: 16px;
+        }
+        main {
+          max-width: 920px;
+          display: flex;
+        }
+        main > div:first-child {
+          flex: 1;
+        }
+        main > div:last-child {
+          width: 21%;
+          margin-left: 4%;
+        }
+        #languages {
+          column-count: 1;
+        }
+        .educert {
+          display: block;
+        }
+        .educert > li:nth-child(n + 2) {
+          margin-top: 0.75rem;
+        }
+        #contact-mini {
+          display: none;
+        }
+        #contact {
+          display: block;
+        }
+        #email,
+        #website {
+          font-size: 0.9em;
+        }
+      }
+
+      @media all and (min-width: 1200px) {
+        html,
+        body {
+          font-size: 18px;
+        }
+        main {
+          max-width: 1120px;
+        }
+        #email,
+        #website {
+          font-size: 1em !important;
+        }
+      }*/
+
+      @media screen {
+        html,
+        body {
+          font-size: 14px;
+        }
+        main {
+          max-width: 920px;
+          display: flex;
+        }
+        main > div:first-child {
+          flex: 1;
+        }
+        main > div:last-child {
+          width: 35%;
+          margin-left: 4%;
+        }
+        #languages {
+          column-count: 1;
+        }
+        .educert {
+          display: block;
+        }
+        .educert > li:nth-child(n + 2) {
+          margin-top: 0.75rem;
+        }
+        #contact-mini {
+          display: none;
+        }
+        #contact {
+          display: block;
+        }
+        #email,
+        #website {
+          font-size: 0.9em;
+        }
+      }
+
+      @media print {
+        @page {
+          size: A4; 
+        }
+        html,
+        body {
+          background: #fff;
+          font-size: 16px;
+          width: 900px;
+        }
+        a,
+        a:visited,
+        a:link,
+        a:active,
+        a:focus,
+        #languages label {
+          text-decoration: none;
+          color: #000;
+        }
+        main {
+          margin: 0;
+          max-width: 920px;
+          display: flex;
+          box-shadow: none;
+        }
+        main > div:first-child {
+          flex: 1;
+        }
+        main > div:last-child {
+          width: 21%;
+          margin-left: 4%;
+        }
+        #filters {
+          display: none;
+        }
+        #languages {
+          column-count: 1;
+        }
+        .educert {
+          display: block;
+        }
+        .educert > li:nth-child(n + 2) {
+          margin-top: 0.75rem;
+        }
+        .position {
+          opacity: 1 !important;
+        }
+        #contact-mini {
+          display: none;
+        }
+        #contact {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main id="resume" itemscope itemtype="http://schema.org/Person">
+      <input type="checkbox" id="html" />
+      <input type="checkbox" id="javascript" />
+      <input type="checkbox" id="css" />
+      <input type="checkbox" id="csharp" />
+      <input type="checkbox" id="java" />
+      <input type="checkbox" id="kotlin" />
+      <input type="checkbox" id="php" />
+      <input type="checkbox" id="sql" />
+      <input type="checkbox" id="sqlserver" />
+      <input type="checkbox" id="mysql" />
+      <input type="checkbox" id="jquery" />
+      <input type="checkbox" id="reactjs" />
+      <input type="checkbox" id="a11y" />
+      <input type="checkbox" id="seo" />
+      <input type="checkbox" id="cq5" />
+      <input type="checkbox" id="aem" />
+      <input type="checkbox" id="mobile" />
+      <input type="checkbox" id="sass" />
+      <input type="checkbox" id="less" />
+      <input type="checkbox" id="api" />
+      <div>
+        <header>
+          <h1 itemprop="name">Ashley Scillitoe</h1>
+          <p id="objective" itemprop="description">
+            <span itemprop="jobTitle">Senior Software Engineer</span> with
+            strong experience creating
+            <span itemprop="knowsAbout"
+              >high-quality, scalable, and high-performance web
+              applications</span
+            >
+            seeking
+            <span itemprop="seeks">front-end and full stack opportunities</span
+            >.
+          </p>
+          <address id="contact-mini">
+            <div itemprop="email">
+              <a href="mailto:ashleyscillitoe@googlemail.com"
+                >ashleyscillitoe@googlemail.com</a
+              >
+            </div>
+            <a href="tel:+447926251138"
+              ><span itemprop="telephone">+44 (0)7926 251 138</span></a
+            >
+            <div>
+              <a
+                rel="external author"
+                href="http://ascillitoe.com"
+                itemprop="url"
+                >ascillitoe.com</a
+              >
+            </div>
+          </address>
+        </header>
+        <section id="professional-experience">
+          <h2>Experience</h2>
+          <div id="filters">
+            <ul>
+              <li>
+                <h3>Filters</h3>
+                <ul>
+                  <li>
+                    <label for="a11y" itemprop="knowsAbout"
+                      >Accessibility</label
+                    >
+                  </li>
+                  <li><label for="aem" itemprop="knowsAbout">AEM</label></li>
+                  <li><label for="csharp">C#</label></li>
+                  <li><label for="cq5" itemprop="knowsAbout">CQ5</label></li>
+                  <li><label for="css">CSS</label></li>
+                  <li><label for="html">HTML</label></li>
+                  <li><label for="java">Java</label></li>
+                  <li><label for="javascript">JavaScript</label></li>
+                  <li>
+                    <label for="jquery" itemprop="knowsAbout">jQuery</label>
+                  </li>
+                  <li><label for="kotlin">Kotlin</label></li>
+                  <li><label for="less" itemprop="knowsAbout">Less</label></li>
+                  <li>
+                    <label for="mobile" itemprop="knowsAbout">Mobile</label>
+                  </li>
+                  <li>
+                    <label for="mysql" itemprop="knowsAbout">MySQL</label>
+                  </li>
+                  <li><label for="php">PHP</label></li>
+                  <li>
+                    <label for="reactjs" itemprop="knowsAbout">ReactJS</label>
+                  </li>
+                  <li>
+                    <label for="api" itemprop="knowsAbout">REST APIs</label>
+                  </li>
+                  <li><label for="sass" itemprop="knowsAbout">Sass</label></li>
+                  <li><label for="seo" itemprop="knowsAbout">SEO</label></li>
+                  <li><label for="sql">SQL</label></li>
+                  <li>
+                    <label for="sqlserver" itemprop="knowsAbout"
+                      >SQL Server</label
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <section
+            itemprop="memberOf"
+            itemscope
+            itemtype="http://schema.org/Organization"
+            class="position reactjs html css javascript kotlin a11y less api"
+          >
+            <h3>
+              <span itemprop="name">The Alan Turing Institute</span>
+              <span class="dept" itemprop="department">Data-Centric Engineering</span>
+            </h3>
+            <h4
+              itemprop="member"
+              itemscope
+              itemtype="http://schema.org/OrganizationRole"
+            >
+              <span itemprop="roleName">Research Associate</span>
+              <span class="dates">
+                <time itemprop="startDate">2017</time>
+                -
+                <time itemprop="endDate">2019</time>
+              </span>
+            </h4>
+            <ul itemprop="description">
+              <li>
+                Developed widgets using React and Less to display patient
+                information.
+              </li>
+              <li>
+                Created design specifications, participated in design and code
+                reviews.
+              </li>
+              <li>
+                Worked on the design and initial development of a new platform
+                to import medical documents.
+              </li>
+              <li>
+                Developed a Kotlin micro-service to generate XML documents based
+                on a government-compliant architecture (CCDA).
+              </li>
+            </ul>
+          </section>
+
+          <section
+            itemprop="memberOf"
+            itemscope
+            itemtype="http://schema.org/Organization"
+            class="position java javascript html css jquery cq5 aem seo a11y mobile sass"
+          >
+            <h3>
+              <span itemprop="name">The University of Cambridge</span>
+              <span class="dept" itemprop="department">Whittle Laboratory</span>
+            </h3>
+            <h4
+              itemprop="member"
+              itemscope
+              itemtype="http://schema.org/OrganizationRole"
+            >
+              <span itemprop="roleName">Research Associate</span>
+              <span class="dates">
+                <time itemprop="startDate">2015</time>
+                -
+                <time itemprop="endDate">2017</time>
+              </span>
+            </h4>
+            <ul itemprop="description">
+              <li>
+                Developed new components for the award-winning website
+                Cadillac.com and its mobile version.
+              </li>
+              <li>
+                Worked with stakeholders to refine and negotiate product
+                requirement specifications, functional specifications, and
+                product vision and direction.
+              </li>
+              <li>
+                Designed a web component that reduced page load speed by over
+                15%, improving SEO and accessibility, and saving authoring
+                expenses.
+              </li>
+              <li>
+                Organized and participated in events representing GM at
+                volunteering opportunities and competitions.
+              </li>
+            </ul>
+          </section>
+
+          <section
+            itemprop="memberOf"
+            itemscope
+            itemtype="http://schema.org/Organization"
+            class="position php csharp mysql html javascript css jquery sqlserver sql a11y sass mobile api"
+          >
+            <h3>
+              <span itemprop="name">The Unversity of Cambridge</span>
+              <span class="dept" itemprop="department"
+                >Department of Engineering</span
+            >
+            </h3>
+            <h4
+              itemprop="member"
+              itemscope
+              itemtype="http://schema.org/OrganizationRole"
+            >
+              <span itemprop="roleName">PhD Student</span>
+              <span class="dates">
+                <time itemprop="startDate">2014</time>
+                -
+                <time itemprop="endDate">2015</time>
+              </span>
+            </h4>
+            <ul itemprop="description">
+              <li>
+                Designed and developed different web projects with a focus on
+                accessibility, including new features and website enhancements.
+              </li>
+              <li>
+                Created and integrated an automated mail system with 3rd party
+                APIs.
+              </li>
+              <li>
+                Developed and collaborated in the translation project of the
+                ITTD website for the Texas Department of Public Safety.
+              </li>
+            </ul>
+          </section>
+
+          <section
+            itemprop="memberOf"
+            itemscope
+            itemtype="http://schema.org/Organization"
+            class="position html javascript css jquery sqlserver sql csharp api"
+          >
+            <h3>
+              <span itemprop="name">AgustaWestland</span>
+              <span class="dept" itemprop="department"
+                >Aerodynamics Department</span
+              >
+            </h3>
+            <h4
+              itemprop="member"
+              itemscope
+              itemtype="http://schema.org/OrganizationRole"
+            >
+              <span itemprop="roleName">IT Engineer</span>
+              <span class="dates">
+                <time itemprop="startDate">2011</time>
+                -
+                <time itemprop="endDate">2014</time>
+              </span>
+            </h4>
+            <ul itemprop="description">
+              <li>
+                Developed two internal content management systems (related to
+                HP’s products documentation) with over three million monthly
+                visitors.
+              </li>
+              <li>
+                Coordinated efforts with an overseas team, applying Agile
+                methodologies to ensure on-time, on-spec project delivery.
+              </li>
+              <li>
+                Improved different batch jobs performance, reducing execution
+                time by over 50%, and eliminating downtime.
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section
+            itemprop="memberOf"
+            itemscope
+            itemtype="http://schema.org/Organization"
+            class="position html javascript css jquery sqlserver sql csharp api"
+          >
+            <h3>
+              <span itemprop="name">Thales Air Defence</span>
+              <span class="dept" itemprop="department"
+                >Aerodynamics Department</span
+              >
+            </h3>
+            <h4
+              itemprop="member"
+              itemscope
+              itemtype="http://schema.org/OrganizationRole"
+            >
+              <span itemprop="roleName">IT Engineer</span>
+              <span class="dates">
+                <time itemprop="startDate">2011</time>
+                -
+                <time itemprop="endDate">2014</time>
+              </span>
+            </h4>
+            <ul itemprop="description">
+              <li>
+                Developed two internal content management systems (related to
+                HP’s products documentation) with over three million monthly
+                visitors.
+              </li>
+              <li>
+                Coordinated efforts with an overseas team, applying Agile
+                methodologies to ensure on-time, on-spec project delivery.
+              </li>
+              <li>
+                Improved different batch jobs performance, reducing execution
+                time by over 50%, and eliminating downtime.
+              </li>
+            </ul>
+          </section>
+        </section>
+
+      </div>
+      <div>
+        <address id="contact" class="contact-2">
+          <div
+            id="location"
+            itemprop="address"
+            itemscope
+            itemtype="http://schema.org/PostalAddress"
+          >
+            <span itemprop="addressLocality">London</span>,
+            <span itemprop="addressRegion">UK</span>
+          </div>
+          <a href="tel:+447926251138" id="phone">+44 (0)7926 251 138</a>
+          <div>
+            <a href="mailto:ashleyscillitoe@googlemail.com" id="email"
+              >ashleyscillitoe@googlemail.com</a
+            >
+          </div>
+          <div>
+            <a href="http://ascillitoe.com" id="website"
+              >ascillitoe.com</a
+            >
+          </div>
+        </address>
+
+        <section>
+          <h2>Skills</h2>
+          <ul class="no-bullets" id="languages">
+            <li>
+              <label for="javascript" itemprop="knowsAbout">JavaScript</label>
+            </li>
+            <li><label for="html" itemprop="knowsAbout">HTML</label></li>
+            <li><label for="css" itemprop="knowsAbout">CSS</label></li>
+            <li><label for="java" itemprop="knowsAbout">Java</label></li>
+            <li><label for="kotlin" itemprop="knowsAbout">Kotlin</label></li>
+            <li><label for="csharp" itemprop="knowsAbout">C#</label></li>
+            <li><label for="php" itemprop="knowsAbout">PHP</label></li>
+            <li><label for="sql" itemprop="knowsAbout">SQL</label></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <ul class="no-bullets educert">
+            <li
+              itemprop="alumniOf"
+              itemscope
+              itemtype="http://schema.org/EducationalOrganization"
+            >
+              <span itemprop="name">University of Cambridge</span>
+              <ul>
+                <li itemprop="award">PhD Computational Fluid Dynamics</li>
+              </ul>
+              <span itemprop="name">University of Manchester</span>
+              <ul>
+                <li itemprop="award">MEng (Hons) Aerospace Engineering</li>
+              </ul>
+            </li>
+        </section>
+
+        <section>
+          <h2>Volunteering</h2>
+          <ul class="no-bullets">
+            <li>
+              <span>Google Summer of Code</span>
+              <ul>
+                <li>
+                  Mentor<br />
+                  <span>
+                    <time>2020</time>
+                    - PRESENT
+                  </span>
+                </li>
+              </ul>
+            </li>
+
+              <span>Open-Source Software</span>
+              <ul>
+                <li>
+                  Developer for equadratures, an open-source python code.<br />
+                  <span>
+                    <time>2018</time>
+                    - PRESENT
+                  </span>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <span>Academic Reviewer</span>
+              <ul>
+                <li>
+                  For numerous journals including J. Comput. Phys., DCE, J. Turbomach., and AIAA J.<br />
+                  <span>
+                    <time>2016</time>
+                    - PRESENT
+                  </span>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <span>Workshop/Conference Organiser</span>
+              <ul>
+                <li>
+                  On organising committee for Cambridge Fluids Energy Turbo Expo 2017, ISC CFDML workshop 2020, and 2021.<br />
+                </li>
+              </ul>
+            </li>
+
+            <li>
+
+          </ul>
+        </section>
+
+        <section>
+          <h2>Additional Links, GRANTS?</h2>
+          <ul class="no-bullets educert">
+            <li>
+              <a
+                rel="external author"
+                href="https://github.com/ascillitoe"
+                >GitHub</a
+              >
+            </li>
+
+            <li>
+              <a
+                rel="external author"
+                href="https://www.researchgate.net/profile/Ashley_Scillitoe"
+                >ResearchGate</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
+

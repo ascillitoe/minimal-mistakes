@@ -21,7 +21,7 @@ Ashley Scillitoe, Pranay Seshadri, Mark Girolami,
 *Uncertainty quantification for data-driven turbulence modelling with mondrian forests*,
 Journal of Computational Physics,
 2021,
-110116,
+**430**(1), 110116,
 ISSN 0021-9991,
 doi: [10.1016/j.jcp.2021.110116](https://doi.org/10.1016/j.jcp.2021.110116). 
 arXiv: [2003.01968](http://arxiv.org/abs/2003.01968).

@@ -41,7 +41,7 @@ img {
 {% endfor %}
 
 {% if yeartest == false %}
-## Under Review
+## Preprints
 {% endif %}
 
 {% for publi in site.data.publist %}
