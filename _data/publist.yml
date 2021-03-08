@@ -30,7 +30,7 @@
 - title: "Instantaneous Flowfield Estimation with Gaussian Ridges"
   authors: A. Scillitoe, P. Seshadri and C. Y. Wong
   url: scillitoe-scitech-2021
-  journal: Proceedings of AIAA SciTech Forum
+  conference: AIAA SciTech Forum
   year: 2021
   info: virtual event 
   doi: 10.2514/6.2021-1138
@@ -40,7 +40,7 @@
 - title: "Design Space Exploration of Stagnation Temperature Probes via Dimension Reduction"
   authors: A. Scillitoe, B. N. Ubald, P. Seshadri, S. Shahpar
   url: scillitoe-ASME-2020
-  journal: Proceedings of ASME Turbo Expo
+  conference: ASME Turbo Expo
   year: 2020
   info: virtual event
   doi: 10.1115/GT2020-16277
@@ -50,7 +50,7 @@
 - title: "Effect of Flux Function Order and Working Precision in Spectral Element Methods"
   authors: W. Trojak, A. Scillitoe, R. Watson
   url: trojak-scitech-2020
-  journal: Proceedings of AIAA SciTech Forum
+  conference: AIAA SciTech Forum
   year: 2020
   info: Orlando, Florida
   doi: 10.2514/6.2020-0566
@@ -71,7 +71,7 @@
 - title: "Bayesian Polynomial Chaos"
   authors: P. Seshadri, A. B. Duncan, A. Scillitoe
   url: seshadri-ml4eng-2020
-  journal: Proceedings of Machine Learning for Engineering Modeling, Simulation, and Design Workshop at NeurIPS
+  conference: Machine Learning for Engineering Modeling, Simulation, and Design Workshop at NeurIPS
   year: 2020
   image: ls89_bayes.png 
   abstract: "In this brief paper we introduce Bayesian polynomial chaos, a Gaussian process analogue to polynomial chaos. We argue why this Bayesian re-formulation of polynomial chaos is necessary and then proceed to mathematically define it, followed by an examination of its utility in computing moments and sensitivities; multi-fidelity modelling, and information fusion."
@@ -88,7 +88,7 @@
 - title: "Separated flow prediction and assessment using LES and machine learning"
   authors: James C. Tyacke, A. Scillitoe
   url: tyacke-ICNAAM-2020
-  journal: Proceedings of International Conference of Numerical Analysis and Applied Mathematics
+  conference: International Conference of Numerical Analysis and Applied Mathematics
   year: 2020
   info: Rhodes, Greece 
   doi: 10.1063/5.0027925 
@@ -99,7 +99,7 @@
   authors: A. Scillitoe
   url: scillitoe-frontuq-2019
   year: 2019
-  journal: Proceedings of Workshop on Frontiers of Uncertainty Quantification in Fluid Dynamics
+  conference: Workshop on Frontiers of Uncertainty Quantification in Fluid Dynamics
   info: Pisa, Italy
   image: turb_shap.png 
 
@@ -123,10 +123,30 @@
   image: endwall_les.png
   abstract: "Regions of three-dimensional separations are an inherent flow feature of the suction surface-endwall corner in axial compressors. These corner separations can cause a significant total pressure loss and reduce the compressor's efficiency. This paper uses wall-resolved LES to investigate the loss sources in a corner separation, and examines the influence of the inflow turbulence on these sources. Different subgrid scale (SGS) models are tested and the choice of model is found to be important. The σ SGS model, which performed well, is then used to perform LES of a compressor endwall flow. The time-averaged data are in good agreement with measurements. The viscous and turbulent dissipation are used to highlight the sources of loss, with the latter being dominant. The key loss sources are seen to be the 2D laminar separation bubble and trailing edge wake, and the 3D flow region near the endwall. Increasing the freestream turbulence (FST) intensity changes the suction surface boundary layer transition mode from separation induced to bypass. However, it does not significantly alter the transition location and therefore the corner separation size. Additionally, the FST does not noticeably interact with the corner separation itself, meaning that in this case the corner separation is relatively insensitive to the FST. The endwall boundary layer state is found to be significant. A laminar endwall boundary layer separates much earlier leading to a larger passage vortex. This significantly alters the endwall flow and loss. Hence, the need for accurate boundary measurements is clear."
 
+- title: "Large eddy simulation of boundary layer transition mechanisms in a gas-turbine compressor cascade"
+  authors: A. Scillitoe, P. G. Tucker, P. Adami
+  url: scillitoe-ASME-2018
+  conference: ASME Turbo Expo
+  year: 2018
+  info: Oslo, Norway
+  doi: 10.1115/GT2018-75569
+  image: les_compressor.png
+  abstract: "Large eddy simulation (LES) is used to explore the boundary layer transition mechanisms in two rectilinear compressor cascades. To reduce numerical dissipation, a novel locally adaptive smoothing (LAS) scheme is added to an unstructured finite volume solver. The performance of a number of subgrid scale (SGS) models is explored. With the first cascade, numerical results at two different freestream turbulence intensities (Ti's), 3.25% and 10%, are compared. At both Ti's, time-averaged skin-friction and pressure coefficient distributions agree well with previous direct numerical simulations (DNS). At Ti = 3.25%, separation-induced transition occurs on the suction surface, while it is bypassed on the pressure surface. The pressure surface transition is dominated by modes originating from the convection of Tollmien–Schlichting waves by Klebanoff streaks. However, they do not resemble a classical bypass transition. Instead, they display characteristics of the “overlap” and “inner” transition modes observed in the previous DNS. At Ti = 10%, classical bypass transition occurs, with Klebanoff streaks incepting turbulent spots. With the second cascade, the influence of unsteady wakes on transition is examined. Wake-amplified Klebanoff streaks were found to instigate turbulent spots, which periodically shorten the suction surface separation bubble. The celerity line corresponding to 70% of the free-stream velocity, which is associated with the convection speed of the amplified Klebanoff streaks, was found to be important."
+
+- title: "Numerical investigation of three-dimensional separation in an axial flow compressor: the influence of freestream turbulence intensity and endwall boundary layer state"
+  authors: A. Scillitoe, P. G. Tucker, P. Adami
+  url: scillitoe-ASME-2016
+  conference: ASME Turbo Expo
+  year: 2016
+  info: Seoul, South Korea
+  doi: 10.1115/GT2016-57241
+  image: endwall_les.png
+  abstract: "Regions of three-dimensional separations are an inherent flow feature of the suction surface-endwall corner in axial compressors. These corner separations can cause a significant total pressure loss and reduce the compressor's efficiency. This paper uses wall-resolved LES to investigate the loss sources in a corner separation, and examines the influence of the inflow turbulence on these sources. Different subgrid scale (SGS) models are tested and the choice of model is found to be important. The σ SGS model, which performed well, is then used to perform LES of a compressor endwall flow. The time-averaged data are in good agreement with measurements. The viscous and turbulent dissipation are used to highlight the sources of loss, with the latter being dominant. The key loss sources are seen to be the 2D laminar separation bubble and trailing edge wake, and the 3D flow region near the endwall. Increasing the freestream turbulence (FST) intensity changes the suction surface boundary layer transition mode from separation induced to bypass. However, it does not significantly alter the transition location and therefore the corner separation size. Additionally, the FST does not noticeably interact with the corner separation itself, meaning that in this case the corner separation is relatively insensitive to the FST. The endwall boundary layer state is found to be significant. A laminar endwall boundary layer separates much earlier leading to a larger passage vortex. This significantly alters the endwall flow and loss. Hence, the need for accurate boundary measurements is clear."
+
 - title: "Evaluation of rans and zdes methods for the prediction of three-dimensional separation in axial flow compressors"
   authors: A. Scillitoe, P. G. Tucker, P. Adami
   url: scillitoe-ASME-2015
-  journal: Proceedings of ASME Turbo Expo
+  conference: ASME Turbo Expo
   year: 2015
   info: Montreal, Canada
   doi: 10.1115/GT2015-43975
@@ -136,7 +156,7 @@
 - title: "An engineering development of a novel hexrotor vehicle for 3D applications"
   authors: D. Langkamp, G. Roberts, A. Scillitoe, I. Lunnon, A. Llopis-Pascual, J. Zamecnik, S. Proctor, M. Rodriguez-Frias, M. Turner, A. Lanzon, W. Crowther
   url: langkamp-imav-2011
-  journal: Proceedings of International Micro Air Vehicle Conference and Competitions
+  conference: International Micro Air Vehicle Conference and Competitions
   year: 2011
   info: "'t Harde, The Netherlands"
   doi: 10.4233/uuid:d7bdec21-938d-426b-9553-59cf834e8061
