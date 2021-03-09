@@ -33,6 +33,81 @@ img {
 </style>
 
 
+{% if site.group_pub_by_year == true %}{% else %}
+## Journal Papers
+{% endif %}
+
+{% for myyear in site.data.years %}
+
+{% assign yeartest = false %}
+{% for publi in site.data.publist %}
+  {% if publi.year == myyear.year %}
+   {% assign yeartest = true %}
+  {% endif %}
+{% endfor %}
+
+{% if site.group_pub_by_year == true %}
+{% if yeartest == true %}
+### {{ myyear.year }}
+{% endif %}
+{% endif %}
+
+{% for publi in site.data.publist %}
+{% if publi.journal %}
+
+{% if publi.year == myyear.year %}
+
+{% assign bibtest = false %}
+{% if publi.url %}
+{% assign bibfile = "/papers/" | append:  publi.url  | append: ".bib" %}
+{% for file in site.static_files %}
+  {% if file.path contains bibfile %}
+   {% assign bibtest = true %}
+  {% endif %}
+{% endfor %}
+{% endif %}
+
+<div class="box">
+<div class="grid-container">
+
+<div class="img_box">
+  {% if publi.image %}
+   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/pubs/{{ publi.image }}"/>
+  {% endif %}
+</div>
+
+<div class="main_box">
+  <b>{{ publi.title }}</b><br/>
+  {{ publi.authors | replace_first: 'A. Scillitoe', '<b>A. Scillitoe</b>'}}<br/>
+  <i>{{ publi.journal }}</i>{% if publi.info %}, {{publi.info}}{% endif %} {% if publi.year %}({{publi.year}}){% endif %}<br/>
+  {% if publi.url %}<a href="{{ site.url }}{{ site.baseurl }}/assets/papers/{{ publi.url }}.pdf" class="btn btn--small btn--success">PDF</a>{% endif %} 
+  {% if publi.doi %}<a href="http://dx.doi.org/{{ publi.doi }}" class="btn btn--small btn--danger">DOI</a> {% endif %}
+  {% if publi.arxiv %}<a href="https://arxiv.org/abs/{{ publi.arxiv }}" class="btn btn--warning btn--small">ARXIV</a> {% endif %}
+  {% if bibtest %}<a href="{{ site.url }}{{ site.baseurl }}/assets/papers/{{ publi.url }}.bib" class="btn btn--primary3 btn--small">BIB</a> {% endif %}
+
+{% if publi.abstract %}
+<div class="wrap-collabsible"> 
+  <input id="collapsible2-{{forloop.index}}" class="toggle" type="checkbox"> 
+  <label for="collapsible2-{{forloop.index}}" class="lbl-toggle" tabindex="0">Abstract</label>
+  <div class="collapsible-content">
+   <div class="content-inner"> {{publi.abstract}} </div>
+  </div>
+</div>
+{% endif %}
+</div>
+
+</div>
+</div>
+
+{% endif %}
+{% endif %} [//]: # ends if statement on line 117
+
+{% endfor %}
+
+{% endfor %}
+
+
+
 {% assign yeartest = true %}
 {% for publi in site.data.publist %}
   {% if publi.year %}{% else %}
@@ -90,83 +165,6 @@ img {
 </div> 
 </div> 
 {% endif %}
-{% endfor %}
-
-
-
-{% if site.group_pub_by_year == true %}{% else %}
-## Journal Papers
-{% endif %}
-
-{% for myyear in site.data.years %}
-
-{% assign yeartest = false %}
-{% for publi in site.data.publist %}
-  {% if publi.year == myyear.year %}
-   {% assign yeartest = true %}
-  {% endif %}
-{% endfor %}
-
-{% if site.group_pub_by_year == true %}
-{% if yeartest == true %}
-### {{ myyear.year }}
-{% endif %}
-{% endif %}
-
-{% for publi in site.data.publist %}
-{% if publi.journal %}
-
-{% if publi.year == myyear.year %}
-
-
-{% assign bibtest = false %}
-{% if publi.url %}
-{% assign bibfile = "/papers/" | append:  publi.url  | append: ".bib" %}
-{% for file in site.static_files %}
-  {% if file.path contains bibfile %}
-   {% assign bibtest = true %}
-  {% endif %}
-{% endfor %}
-{% endif %}
-
-
-<div class="box">
-<div class="grid-container">
-
-<div class="img_box">
-  {% if publi.image %}
-   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/pubs/{{ publi.image }}"/>
-  {% endif %}
-</div>
-
-<div class="main_box">
-  <b>{{ publi.title }}</b><br/>
-  {{ publi.authors | replace_first: 'A. Scillitoe', '<b>A. Scillitoe</b>'}}<br/>
-  <i>{{ publi.journal }}</i>{% if publi.info %}, {{publi.info}}{% endif %} {% if publi.year %}({{publi.year}}){% endif %}<br/>
-  {% if publi.url %}<a href="{{ site.url }}{{ site.baseurl }}/assets/papers/{{ publi.url }}.pdf" class="btn btn--small btn--success">PDF</a>{% endif %} 
-  {% if publi.doi %}<a href="http://dx.doi.org/{{ publi.doi }}" class="btn btn--small btn--danger">DOI</a> {% endif %}
-  {% if publi.arxiv %}<a href="https://arxiv.org/abs/{{ publi.arxiv }}" class="btn btn--warning btn--small">ARXIV</a> {% endif %}
-  {% if bibtest %}<a href="{{ site.url }}{{ site.baseurl }}/assets/papers/{{ publi.url }}.bib" class="btn btn--primary3 btn--small">BIB</a> {% endif %}
-
-{% if publi.abstract %}
-<div class="wrap-collabsible"> 
-  <input id="collapsible2-{{forloop.index}}" class="toggle" type="checkbox"> 
-  <label for="collapsible2-{{forloop.index}}" class="lbl-toggle" tabindex="0">Abstract</label>
-  <div class="collapsible-content">
-   <div class="content-inner"> {{publi.abstract}} </div>
-  </div>
-</div>
-{% endif %}
-</div>
-
-</div>
-</div>
-
-{% endif %}
-{% endif %} [//]: # ends if statement on line 117
-
-{% endfor %}
-
 {% endfor %}
 
 
