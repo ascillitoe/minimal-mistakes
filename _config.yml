@@ -85,6 +85,10 @@ social:
   links: # An array of links to social media profiles
     - "https://twitter.com/scillitoes"
     - "https://www.linkedin.com/in/ashley-scillitoe-96980131/"
+    - "https://scholar.google.com/citations?user=PIkQ6YQAAAAJ&hl"
+    - "https://www.researchgate.net/profile/Ashley-Scillitoe"
+    - "https://github.com/ascillitoe"
+    - "https://orcid.org/0000-0001-8971-7224"
 
 # Analytics
 analytics:
