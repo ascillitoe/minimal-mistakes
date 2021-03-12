@@ -76,20 +76,22 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : #"/assests/images/og_image.png" # Open Graph/Twitter default site image
+og_image                 : "/assets/images/me.jpg" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  name                   : "Ashley Scillitoe" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - "https://twitter.com/scillitoes"
+    - "https://www.linkedin.com/in/ashley-scillitoe-96980131/"
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+    tracking_id          : "G-FBPC4FEJ9F"
+    anonymize_ip         : false # true, false (default)
 
 
 # Site Author
