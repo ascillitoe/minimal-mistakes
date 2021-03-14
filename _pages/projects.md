@@ -14,7 +14,7 @@ feature_row:
   - image_path: /assets/images/posts/2Dsplit.gif
     alt: "Machine Learning"
     title: "Machine Learning with Polynomials"
-    excerpt: "***Polynomial regression trees*** combine decision tree learning with polynomial regression, resulting in accurate yet interpretable models. The resulting models can be used for a wide range of tasks, from traditional supervised learning to uncertainty quantification."
+    excerpt: "*Polynomial regression trees* combine decision tree learning with polynomial regression, resulting in accurate yet interpretable models. The resulting models can be used for a wide range of tasks, from traditional supervised learning to uncertainty quantification."
     url: "/projects/polynomial-regression-trees/"
     btn_class: "btn--primary3"
     btn_label: "Learn more"
@@ -37,7 +37,7 @@ feature_row2:
 #  - image_path: /assets/images/posts/bayesian.png
 #    alt: "Multi-Fidelity"
 #    title: "Multi-fidelity Polynomials using Bayesian Statistics"
-#    excerpt: "High fidelity data is often viewed simply as data used to validate cheaper low fidelity models. We introduce ***Bayesian polynomial chaos*** to exploit multi-fidelity data in a more symbiotic manner."
+#    excerpt: "High fidelity data is often viewed simply as data used to validate cheaper low fidelity models. We introduce *Bayesian polynomial chaos* to exploit multi-fidelity data in a more symbiotic manner."
 #    url: "/projects/bayesian-pce"
 #    btn_class: "btn--primary3"
 #    btn_label: "Learn more"
