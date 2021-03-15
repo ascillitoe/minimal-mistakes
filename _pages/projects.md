@@ -11,13 +11,6 @@ header:
 excerpt: My research is focused on applying data-driven methods to aerospace problems.  
 
 feature_row:
-  - image_path: /assets/images/posts/2Dsplit.gif
-    alt: "Machine Learning"
-    title: "Machine Learning with Polynomials"
-    excerpt: "*Polynomial regression trees* combine decision tree learning with polynomial regression, resulting in accurate yet interpretable models. The resulting models can be used for a wide range of tasks, from traditional supervised learning to uncertainty quantification."
-    url: "/projects/polynomial-regression-trees/"
-    btn_class: "btn--primary3"
-    btn_label: "Learn more"
   - image_path: /assets/images/posts/endwall_les.png
     alt: "Turbulence Modelling"
     title: "Data-driven Turbulence Modelling"
@@ -32,6 +25,13 @@ feature_row:
     url: "/posts/2020/dimension-reduction-for-probes/"
     btn_class: "btn--primary3"
     btn_label: "Learn more"      
+  - image_path: /assets/images/posts/2Dsplit.gif
+    alt: "Machine Learning"
+    title: "Machine Learning with Polynomials"
+    excerpt: "*Polynomial regression trees* combine decision tree learning with polynomial regression, resulting in accurate yet interpretable models. The resulting models can be used for a wide range of tasks, from traditional supervised learning to uncertainty quantification."
+    url: "/projects/polynomial-regression-trees/"
+    btn_class: "btn--primary3"
+    btn_label: "Learn more"
 
 feature_row2:
 #  - image_path: /assets/images/posts/bayesian.png

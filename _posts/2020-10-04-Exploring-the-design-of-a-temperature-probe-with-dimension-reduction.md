@@ -7,6 +7,8 @@ tags:
   - effective-quadratures
 mathjax: true
 excerpt: In many engineering design tasks, we suffer from the *curse of dimensionality*. The number of design parameters quickly becomes too large for us to effectively visualise or explore the design space. We could attempt to use a design optimisation procedure to arrive at an "optimal" design, however, the curse of dimensionality places a computational burden on the cost of the optimisation. Also, in many cases we wish to *understand* the design space, not just spit out a "better" design.
+header:
+    teaser: assets/images/posts/probe_design/turbofan.jpg
 ---
 
 [<i class='fas fa-download'></i> Get code](https://github.com/ascillitoe/probe-subspaces){: .btn .btn--primary}
