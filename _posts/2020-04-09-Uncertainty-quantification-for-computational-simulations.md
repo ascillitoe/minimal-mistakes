@@ -4,13 +4,14 @@ permalink: /posts/2020/uq-for-cfd/
 tags:
   - CFD
   - uncertainty-quantification
-  - effective-quadratures
+  - equadratures
 mathjax: true
+excerpt: Uncertainty quantification is the science of quantifying, and perhaps reducing, uncertainties in both computational and real world applications. Many fields of engineering rely on computational simulations, such as Computational Fluid Dynamics simulations, to predict Quantities of Interest, such as lift and drag coefficients for an aerofoil or vehicle. These simulations have many sources of uncertainty.
 header:
     teaser: assets/images/posts/cfd_uq/hpc.jpg
 ---
 
-In this blog post, I'll talk about using the [Effective Quadratures](https://github.com/Effective-Quadratures/equadratures) python package for uncertainty quantification of computational simulations. If you'd like to follow along, the code from this post can be run interactively on the cloud by clicking below:
+In this blog post, I'll talk about using the [*equadratures*](https://github.com/Effective-Quadratures/equadratures) python package for uncertainty quantification of computational simulations. If you'd like to follow along, the code from this post can be run interactively on the cloud by clicking below:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Effective-Quadratures/EQ-live/blob/master/Blog_posts/computing_moments.ipynb)
 
@@ -33,7 +34,7 @@ The effect of aleatory uncertainties on a QoI can be quantified by propagating t
 
 # Computing moments with polynomials vs random sampling 
 
-Before getting to *forward propagation* on a real CFD example, lets first explore the motivation for using Effective Quadratures for this, by comparing it to a random sampling approach. It is important to note that often we are not interested in the actual PDF of our QoI $y$, but only its statistical moments, the first four of which are shown in Figure 2. Here we will focus on the first two, the mean $\bar{y}$ and variance $Var(y)$, which often tell us sufficient information about the uncertainty in our QoI's. 
+Before getting to *forward propagation* on a real CFD example, lets first explore the motivation for using *equadratures* for this, by comparing it to a random sampling approach. It is important to note that often we are not interested in the actual PDF of our QoI $y$, but only its statistical moments, the first four of which are shown in Figure 2. Here we will focus on the first two, the mean $\bar{y}$ and variance $Var(y)$, which often tell us sufficient information about the uncertainty in our QoI's. 
 
 {% include figure.html
     image_path="assets/images/posts/cfd_uq/moments.jpg"
@@ -46,7 +47,7 @@ Why bother using polynomials for estimating moments? What exactly is the advanta
 {% include figure.html
     image_path="assets/images/posts/cfd_uq/mean_and_var.png"
     alt="Mean and variance"
-    caption="Figure 3: Mean and variance estimates versus number of samples for Monte Carlo type random sampling and polynomial approximations (with Effective Quadratures). [Source.](https://effective-quadratures.github.io/_documentation/tutorial_4.html)"
+    caption="Figure 3: Mean and variance estimates versus number of samples for Monte Carlo type random sampling and polynomial approximations (with *equadratures*). [Source.](https://effective-quadratures.github.io/_documentation/tutorial_4.html)"
     width="85%"%}
 
 In this post we will start with a more simple univariate problem. We have one input parameter $s\_1$, which has a uniform distribution $\mathcal{S}=\mathcal{U}[0,1]$, and our model is a simple quadratic $f(s\_1) = -s\_1^2 + s\_1 + 1$. 
@@ -85,9 +86,9 @@ On the [azure notebook](https://eqlive-ascillitoe.notebooks.azure.com/j/notebook
     alt="Random sampling"
     caption="Figure 5: Random sampling of the model function $f(s\_1)$ with $N=5$ and $N=552$."%}
 
-## Using Effective Quadratures
+## Using *equadratures*
 
-Alternatively, we can use Effective Quadratures to compute the moments of $y$, with the code below. We simply declare the usual building blocks (a `Parameter`, `Basis` and `Poly` object), give the `Poly` our data (or function) with `set_model`, and then run `get_mean_and_variance`. 
+Alternatively, we can use *equadratures* to compute the moments of $y$, with the code below. We simply declare the usual building blocks (a `Parameter`, `Basis` and `Poly` object), give the `Poly` our data (or function) with `set_model`, and then run `get_mean_and_variance`. 
 ```python
 s1 = Parameter(distribution='uniform', lower=0., upper=1., order=2)
 mybasis = Basis('univariate')
@@ -101,7 +102,7 @@ mean, var = mypoly.get_mean_and_variance()
     alt="Code output"
     width="60%"%}
 
-The accuracy is clearly pretty good! What have we actually done here? Behind the scenes, Effective Quadratures has calculated the quadrature points in $s\_1$ (dependent on our choice of `distribution`, `order` and the `Basis`). Then it has evaluated our model at these points, and used the results to construct a polynomial approximation (*response surface*), $f(s\_1)\approx \sum\_{i=1}^N x\_i p\_i(s\_1)$.
+The accuracy is clearly pretty good! What have we actually done here? Behind the scenes, *equadratures* has calculated the quadrature points in $s\_1$ (dependent on our choice of `distribution`, `order` and the `Basis`). Then it has evaluated our model at these points, and used the results to construct a polynomial approximation (*response surface*), $f(s\_1)\approx \sum\_{i=1}^N x\_i p\_i(s\_1)$.
 
 {% include figure.html
     image_path="assets/images/posts/cfd_uq/1d_response.png"
@@ -151,7 +152,7 @@ s2 = Parameter(distribution='Gaussian', shape_parameter_A=10, shape_parameter_B=
 mybasis = Basis('tensor-grid')
 mypoly = Poly(parameters=[s1,s2], basis=mybasis, method='numerical-integration')
 ```
-This time running `set_model` is a little more involved, since our model is a CFD simulation instead of a simple polynomial function. We first ask Effective Quadratures for the quadrature points, and save them to disk.
+This time running `set_model` is a little more involved, since our model is a CFD simulation instead of a simple polynomial function. We first ask *equadratures* for the quadrature points, and save them to disk.
 
 ```python
 pts = mypoly.get_points()
@@ -175,7 +176,7 @@ mean, var = mypoly.get_mean_and_variance()
 
 So our 95% confidence interval due to uncertainty in inflow turbulence specification is $Y\_p\pm 0.00047$. This seems small but is actually 0.88% of the mean $Y\_p$ value, so may be significant depending on your use case. 
 
-And there you have it! Quantification of aleatory uncertainties using Effective Quadratures, with far fewer model evaluations (CFD runs!) required compared to Monte Carlo approaches. These cost savings only increase as the number of parameters we wish to propagate increases!
+And there you have it! Quantification of aleatory uncertainties using *equadratures*, with far fewer model evaluations (CFD runs!) required compared to Monte Carlo approaches. These cost savings only increase as the number of parameters we wish to propagate increases!
 
 ## Dealing with failed simulations
 
@@ -186,7 +187,7 @@ Any CFD practitioner is probably all too familiar with CFD simulations not conve
     alt="Tensor grid NaN"
     width="60%"%}
 
-The answer is *no problem!* Effective Quadratures detects the NaN's in our `tensor-grid` and automatically switches to a Least Squares technique to find the polynomial coefficients. The accuracy of the computed moments is within 2% of the previous values!
+The answer is *no problem!* *equadratures* detects the NaN's in our `tensor-grid` and automatically switches to a Least Squares technique to find the polynomial coefficients. The accuracy of the computed moments is within 2% of the previous values!
 
 {% include figure.html
     image_path="assets/images/posts/cfd_uq/error_output.png"

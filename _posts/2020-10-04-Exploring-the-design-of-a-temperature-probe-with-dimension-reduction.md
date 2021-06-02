@@ -4,7 +4,7 @@ permalink: /posts/2020/dimension-reduction-for-probes/
 tags:
   - CFD
   - dimension-reduction
-  - effective-quadratures
+  - equadratures
 mathjax: true
 excerpt: In many engineering design tasks, we suffer from the *curse of dimensionality*. The number of design parameters quickly becomes too large for us to effectively visualise or explore the design space. We could attempt to use a design optimisation procedure to arrive at an "optimal" design, however, the curse of dimensionality places a computational burden on the cost of the optimisation. Also, in many cases we wish to *understand* the design space, not just spit out a "better" design.
 header:
@@ -22,7 +22,7 @@ This brings us to *dimension reduction*, a set of ideas which allows us to reduc
 3. Obtaining new "better" designs.
 4. Assessing sensitivity to manufacturing uncertainties. 
 
-This post summarises our recent [ASME Turbo Expo 2020 paper](https://www.researchgate.net/publication/344362850_Design_Space_Exploration_of_Stagnation_Temperature_Probes_via_Dimension_Reduction), where we use Effective Quadratures to perform dimension reduction on the design space of a stagnation temperature probe used in aircraft jet engines. 
+This post summarises our recent [ASME Turbo Expo 2020 paper](https://www.researchgate.net/publication/344362850_Design_Space_Exploration_of_Stagnation_Temperature_Probes_via_Dimension_Reduction), where we use *equadratures* to perform dimension reduction on the design space of a stagnation temperature probe used in aircraft jet engines. 
 
 ## Part 1: Obtaining dimension reducing subspaces
 
@@ -69,7 +69,7 @@ f \left( \mathbf{x} \right) \approx h \left( \mathbf{U}^{T} \mathbf{x} \right),
 $$
 
 
-where $\mathbf{U} \in \mathbb{R}^{d \times m}$ is an orthogonal matrix with $m \ll d$, implying that $h$ is a polynomial function of $m$ variables---ideally $m=1$ or $m=2$ to facilitate easy visualization. In addition to $m$, the polynomial order of $h$, given by $k$, must also be chosen. The matrix $\mathbf{U}$ isolates $m$ linear combinations of *all* the design parameters that are deemed sufficient for approximating $f$ with $h$. Effective Quadratures possesses two methods for determining the unknowns $\mathbf{U}$ and $h$; the `method=active-subspace` uses ideas from [1] to compute a dimension-reducing subspace with a global polynomial approximant, whilst `method=variable-projection` [2] solves a Gauss-Newton optimisation problem to compute both the polynomial coefficients and its subspace. Both of these methods involve finding solutions to the non-linear least squares problem
+where $\mathbf{U} \in \mathbb{R}^{d \times m}$ is an orthogonal matrix with $m \ll d$, implying that $h$ is a polynomial function of $m$ variables---ideally $m=1$ or $m=2$ to facilitate easy visualization. In addition to $m$, the polynomial order of $h$, given by $k$, must also be chosen. The matrix $\mathbf{U}$ isolates $m$ linear combinations of *all* the design parameters that are deemed sufficient for approximating $f$ with $h$. *equadratures* possesses two methods for determining the unknowns $\mathbf{U}$ and $h$; the `method=active-subspace` uses ideas from [1] to compute a dimension-reducing subspace with a global polynomial approximant, whilst `method=variable-projection` [2] solves a Gauss-Newton optimisation problem to compute both the polynomial coefficients and its subspace. Both of these methods involve finding solutions to the non-linear least squares problem
 
 $$
 \underset{\mathbf{U}, \boldsymbol{\alpha}}{\text{minimize}} \; \; \left\Vert f\left(\mathbf{x}\right)-h_{\boldsymbol{\alpha}}\left(\mathbf{U}^{T} \mathbf{x}\right)\right\Vert _{2}^{2},
@@ -89,7 +89,7 @@ f_{N}
 \end{array}\right],
 $$
 
-and replace $f \left( \mathbf{x} \right)$ in the least squares problem above with the evaluations $\mathbf{f}$. To do this in Effective Quadratures it is as simple as doing:
+and replace $f \left( \mathbf{x} \right)$ in the least squares problem above with the evaluations $\mathbf{f}$. To do this in *equadratures it is as simple as doing:
 
 ```python
 m_Y = 1  # Number of reduced dimensions we want
@@ -249,7 +249,7 @@ Similar to the way a human (a 3D object!) projects a 2D shadow on the ground, ou
             caption="Figure 8: A shadow is a 2D projection of a 3D object" 
             width="55%"%}
 
-This 2D projection of the design space is referred to as the *zonotope*, and can be obtained from Effective Quadratures with the `.get_zonotope_vertices()` method. Below this is plotted, along with contours of $O\_{Rr}$. 
+This 2D projection of the design space is referred to as the *zonotope*, and can be obtained from *equadratures* with the `.get_zonotope_vertices()` method. Below this is plotted, along with contours of $O\_{Rr}$. 
 
 ```python
 # Plot zonotope for Rr (the black line)
@@ -350,7 +350,7 @@ These plots can also be used to find designs which are insensitive to a certain 
 
 ## Other Examples
 
-For other examples of how the [dimension reduction module](https://www.effective-quadratures.org/docs/_documentation/subspaces.html) in Effective Quadratures can be used, check out:
+For other examples of how the [dimension reduction module](https://www.effective-quadratures.org/docs/_documentation/subspaces.html) in *equadratures* can be used, check out:
 
 * Nicholas Wong's great [blog post](https://discourse.effective-quadratures.org/t/embedded-ridge-approximations/73), where he examines the use of dimension reduction for flowfield approximations.
 * Pranay Seshadri's [paper](https://asmedigitalcollection.asme.org/turbomachinery/article-abstract/140/4/041003/378904/Turbomachinery-Active-Subspace-Performance-Maps?redirectedFrom=fulltext), introducing dimension reducing turbomachinery performance maps.

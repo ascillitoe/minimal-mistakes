@@ -3,7 +3,7 @@ title: 'Regularisation 1: Handling real-world data'
 permalink: /posts/2021/regularised-polynomials/
 tags:
   - machine-learning
-  - effective-quadratures
+  - equadratures
   - sparse-regression
 header:
     teaser: assets/images/posts/regularisation1/piston.jpg
@@ -24,7 +24,7 @@ With polynomial regression, such as that used by *equadratures*, the *model comp
 
 One approach to the above problem is *regularised regression*, where penalty terms are used to discourage more complex models, thus mitigating the risk of overfitting. The resulting *sparse solutions*, with fewer non-zero model coefficients, also aid model interpretability. In this series of posts I'll be exploring a number of topics surrounding regularisation, starting with a deeper look at the motivation behind regularisation. As usual, if you want to follow along, click on the link below:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ascillitoe/EQ-live/blob/master/Blog_posts/regularisation/regularisation_1.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ascillitoe/EQ-live/blob/master/Blog_posts/regularisation/post_regularisation1.ipynb)
 
 # High order polynomials
 ## Ordinary Least Squares regression
