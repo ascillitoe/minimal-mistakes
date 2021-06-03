@@ -84,7 +84,7 @@ social:
   name                   : "Ashley Scillitoe" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
     - "https://twitter.com/scillitoes"
-    - "https://www.linkedin.com/in/ashley-scillitoe-96980131/"
+    - "https://www.linkedin.com/in/ashley-scillitoe"
     - "https://scholar.google.com/citations?user=PIkQ6YQAAAAJ&hl"
     - "https://www.researchgate.net/profile/Ashley-Scillitoe"
     - "https://github.com/ascillitoe"
