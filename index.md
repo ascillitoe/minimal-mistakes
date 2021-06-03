@@ -15,7 +15,7 @@ My research explores the use of machine learning and statistical methods for tac
 
 - Uncertainty quantification for data-driven turbulence modelling, using Mondrian forests.
 
-- Rapid flowfield estimation via embedded ridge functions.
+- Rapid flowfield estimation via embedded ridge functions and deep neural networks.
 
 - Using dimension reduction techniques to tackle the curse of dimensionality in aerospace design tasks.
 
