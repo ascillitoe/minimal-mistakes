@@ -25,7 +25,7 @@ In this project, we develop a new flowfield approximation framework which involv
 
 Scillitoe, A., Seshadri, P. and Wong, C., 2021. *Instantaneous Flowfield Estimation with Gaussian Ridges.* In: AIAA SciTech. AIAA. Available at: <https://arc.aiaa.org/doi/abs/10.2514/6.2021-1138>.
 
-However, as a more efficient alternative, we're currently exploring the use of orthogonal polynomials using our [equadratures](https://github.com/Effective-Quadratures/Effective-Quadratures) python library.
+As a more efficient alternative, we're currently exploring the use of orthogonal polynomials using our [equadratures](https://github.com/Effective-Quadratures/Effective-Quadratures) python library. See [this app](http://reduce.ascillitoe.com/) for an interactive example!
 
 [//]: # ## Embedded Ridge Approximations
 

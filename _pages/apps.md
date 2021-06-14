@@ -1,0 +1,32 @@
+---
+title: "Apps"
+permalink: /apps/
+layout: splash
+author_profile: false
+
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/code_header.jpg
+excerpt: The best way to learn is by doing. Have a go with my interactive apps!
+
+feature_row:
+  - image_path: /assets/images/posts/hi_dim.jpeg
+    alt: "Dimension Reduction"
+    title: "Tackling the Curse of Dimensionality"
+    excerpt: "Performing data-driven dimension reduction with the equadratures package. Upload your own data or try an example dataset!"
+    url: "http://reduce.ascillitoe.com/datadriven"
+    btn_class: "btn--primary3"
+    btn_label: "Load" 
+  - image_path: /assets/images/posts/rapid_cfd.png
+    alt: "Rapid CFD"
+    title: "Rapid Flowfield Predictions"
+    excerpt: "Exploiting polynomial ridge functions for design exploration and rapid flowfield estimation of an airfoil. Predictive accuracy is competitive with a state-of-the-art convolutional neural network."
+    url: "http://reduce.ascillitoe.com/flowfield"
+    btn_class: "btn--primary3"
+    btn_label: "Load"
+---
+
+These apps are hosted on free Heroku dyno's. They take a little while to boot up, and can be slow when busy. Please try again later if they are too slow!
+
+{% include feature_row %}

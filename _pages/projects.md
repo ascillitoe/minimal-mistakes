@@ -8,7 +8,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/code_header.jpg
-excerpt: My research is focused on applying data-driven methods to aerospace problems.  
+excerpt: My research involves applying data-driven methods to aerospace problems.  
 
 feature_row:
   - image_path: /assets/images/posts/endwall_les.png
