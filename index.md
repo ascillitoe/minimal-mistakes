@@ -7,7 +7,7 @@ header:
     image: /assets/images/aircraft_header.jpg
 ---
 
-I am a Research Fellow in the [Data-Centric Engineering for Aeronautics](https://www.turing.ac.uk/research/research-projects/digital-twins-aeronautics) group at [The Alan Turing Institute](https://www.turing.ac.uk/).
+I am a Research Associate in the [Data-Centric Engineering for Aeronautics](https://www.turing.ac.uk/research/research-projects/digital-twins-aeronautics) group at [The Alan Turing Institute](https://www.turing.ac.uk/).
 {: .text-justify}
 
 My research explores the use of machine learning and statistical methods for tackling aerospace engineering problems, with data primarily coming from computational simulations. To encourage industrial uptake, much of my work is focused on developing approaches with uncertainty quantification and interpretability in mind. I am funded by the EPSRC and the Lloyd's Register Foundation, with previous projects including:
