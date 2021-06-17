@@ -27,6 +27,6 @@ feature_row:
     btn_label: "Load"
 ---
 
-These apps are hosted on free Heroku dyno's. They take a little while to boot up, and can be slow when busy. Please try again later if they are too slow!
+These apps are hosted on Heroku dyno's which have limited resources. Please try again later if they are too slow!
 
 {% include feature_row %}
