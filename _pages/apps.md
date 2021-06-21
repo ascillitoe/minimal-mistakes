@@ -29,7 +29,7 @@ feature_row:
     alt: "Rapid CFD"
     title: "Polynomial Regression Trees"
     excerpt: "Combining decision trees and polynomials to form a new supervised machine learning model with a high degree of interpretability."
-    url: "http://prtree.ascillitoe.com/supervised"
+    url: "https://eq-prtree.herokuapp.com/supervised"
     btn_class: "btn--primary3"
     btn_label: "Load"
 
