@@ -103,7 +103,7 @@ author:
   name             : "Ashley Scillitoe"
   avatar           : "/assets/images/me.jpg"
     #  bio              : "Data scientist with background in computational fluid dynamics for aerospace applications."
-  bio              : "Tackling aerospace challenges with innovations in computational fluid dynamics and data science."
+  bio              : "Tackling aerospace challenges with innovations in fluid dynamics and data science."
   location         : "London, UK"
   email            : "ashleyscillitoe@googlemail.com"
   links:
