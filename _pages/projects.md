@@ -51,7 +51,7 @@ feature_row2:
   - image_path: /assets/images/posts/suction.gif
     alt: "Large Eddy Simulation"
     title: "Large Eddy Simulation for Turbomachinery"
-    excerpt: "My PhD involved working with Rolls-Royce to examine the feasability of modifying an industrial CFD code, in order to run high fidelity Large Eddy Simulations of the transitional flows in aero-engines."
+    excerpt: "My PhD involved working with Rolls-Royce; examining the feasability of modifying an industrial CFD code to run high fidelity Large Eddy Simulations of the transitional flows in aero-engines."
     url: "/projects/les-of-transitional-compressors"
     btn_class: "btn--primary3"
     btn_label: "Learn more"
