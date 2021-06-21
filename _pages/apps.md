@@ -25,6 +25,14 @@ feature_row:
     url: "https://reduce.ascillitoe.com/flowfield"
     btn_class: "btn--primary3"
     btn_label: "Load"
+  - image_path: /assets/images/posts/polytree_app.png
+    alt: "Rapid CFD"
+    title: "Polynomial Regression Trees"
+    excerpt: "Combining decision trees and polynomials to form a new supervised machine learning model with a high degree of interpretability."
+    url: "http://prtree.ascillitoe.com/supervised"
+    btn_class: "btn--primary3"
+    btn_label: "Load"
+
 ---
 
 These apps are hosted on Heroku dyno's with limited resources. Please try again later if they are too slow!
